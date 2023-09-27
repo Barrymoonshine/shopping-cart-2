@@ -41,14 +41,13 @@ const useShopDispatch = () => {
       });
       const data = await response.json();
       if (response.ok) {
-        console.log('data in response ok', data);
         saveProducts(data);
         toggleProductsLoading();
       } else {
         saveProductsError(data);
         toggleProductsLoading();
       }
-    } catch (error) {
+    } catch (error: unknown) {
       saveProductsError(error);
       toggleProductsLoading();
     }

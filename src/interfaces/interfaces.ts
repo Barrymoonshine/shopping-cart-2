@@ -14,3 +14,9 @@ export interface IProductCard {
   description: string;
   image: string;
 }
+
+export interface IFeatureCard {
+  title: string;
+  price: number;
+  image: string;
+}

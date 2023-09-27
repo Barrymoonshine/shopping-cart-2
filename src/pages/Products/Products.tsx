@@ -1,26 +1,11 @@
 import './Products.css';
 import uniqid from 'uniqid';
 import { IProduct } from '../../interfaces/interfaces';
-import { useEffect } from 'react';
 import useShopState from '../../hooks/useShopState';
-import useShopDispatch from '../../hooks/useShopDispatch';
 import ProductCard from '../../components/ProductCard/ProductCard';
 
 const Products = () => {
   const { products, areProductsLoading, productsError } = useShopState();
-  const { getProducts } = useShopDispatch();
-
-  useEffect(() => {
-    let isMounted = true;
-    if (isMounted) {
-      getProducts();
-    }
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  console.log('products on Products', products);
 
   return (
     <div>
