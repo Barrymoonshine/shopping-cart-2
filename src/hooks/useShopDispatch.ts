@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import ACTIONS from '../utils/ACTIONS';
-import IProduct from '../interfaces/interfaces';
+import { IProduct } from '../interfaces/interfaces';
 
 const useShopDispatch = () => {
   const { dispatch } = useContext(ShopContext);
@@ -41,6 +41,7 @@ const useShopDispatch = () => {
       });
       const data = await response.json();
       if (response.ok) {
+        console.log('data in response ok', data);
         saveProducts(data);
         toggleProductsLoading();
       } else {

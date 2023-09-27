@@ -16,7 +16,7 @@ const shopReducer = (state, action) => {
     case ACTIONS.SAVE_PRODUCTS:
       return {
         ...state,
-        cart: payload.newCart,
+        products: payload.products,
       };
     case ACTIONS.TOGGLE_PRODUCTS_LOADING:
       return {

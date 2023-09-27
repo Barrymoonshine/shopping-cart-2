@@ -1,6 +1,6 @@
 import './Products.css';
 import uniqid from 'uniqid';
-import IProduct from '../../interfaces/interfaces';
+import { IProduct } from '../../interfaces/interfaces';
 import { useEffect } from 'react';
 import useShopState from '../../hooks/useShopState';
 import useShopDispatch from '../../hooks/useShopDispatch';
@@ -19,9 +19,9 @@ const Products = () => {
       isMounted = false;
     };
   }, []);
-  // Get data from FakeStore API
-  // Use data to populate Product Cards
-  // Perform type checking
+
+  console.log('products on Products', products);
+
   return (
     <div>
       This is the products page
@@ -31,7 +31,6 @@ const Products = () => {
         products.map((product: IProduct) => (
           <ProductCard
             key={uniqid()}
-            id={product.id}
             title={product.title}
             category={product.category}
             price={product.price}
