@@ -1,0 +1,17 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+  gap: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.feature-card h6 {
+  margin: 0px;
+  font-size: 20px;
+}

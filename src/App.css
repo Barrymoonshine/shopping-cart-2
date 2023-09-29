@@ -10,3 +10,11 @@ ul {
 body {
   font-family: 'Karla', sans-serif;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

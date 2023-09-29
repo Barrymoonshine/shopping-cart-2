@@ -16,6 +16,7 @@ export interface IProductCard {
 }
 
 export interface IFeatureCard {
+  id: number;
   title: string;
   price: number;
   image: string;
